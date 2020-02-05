@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Search Page</title>
+    <link rel="stylesheet" href="searchbar.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="https://resources/demos/style.css"> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="nav.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script> -->
+    <!-- <script type="text/javascript" src="http://www.datejs.com/build/date.js"></script> -->
+    <!-- <link rel="stylesheet" href="datatables.min.css" /> -->
+    <!-- <script src="datatables.min.js"></script> -->
+   
+</head>
+
+<body>
+    <!--Header Start-->
+    <header class="main_menu">
+
+        <div class="upperdiv">
+            <div class="social_media">
+                <div class="social_icon">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <span><a><i class="fas fa-phone-volume"></i>+880 356 257 142</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <img src="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/logo.jpg" alt="logo">
+            </div>
+
+            <nav>
+                <div class="icon-bar" onclick="Show()">
+                    <!--Three lines when screen size small-->
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+
+                <ul id="nav-lists">
+                    <li class="close"><span onclick="Hide()">×</span></li>
+                    <li><a
+                            href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/MainPageTest3.html">Home</a>
+                    </li>
+                    <li><a
+                            href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/SearchTest5.html">Search
+                            Destinations</a></li>
+                    <li><a
+                            href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/FavoriteListDraggeandDrop.html">Favorite
+                            List</a></li>
+                </ul>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+    <!--End Header-->
+    <hr>
+    <div class="search_bar">
+        <h1>Sign Up Now!<span>Sign up and tell us what you looking for</span></h1>
+        <!--Start the form-->
+        <form action="#" method="GET">
+            <!--Start dropdownList of Destination-->
+            <div class="section"><span>1</span>Destination</div>
+            <div class="inner-wrap">
+
+                <select name="destination" id="destination">
+                    <option value="Caribbean">Caribbean</option>
+                    <option value="Indian Ocean">Indian Ocean</option>
+                    <option value="Alps">Alps</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="North and Central America">North and Central America</option>
+                </select>
+            </div>
+            <!--End the dropdownList-->
+
+            <!--Start Comfort level-->
+            <div class="section"><span>2</span>Comfort Level</div>
+            <div class="inner-wrap">
+                <!--Jquery ui Slider-->
+                <input type="text" id="comfortLevel" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                <div id="slider"></div>
+            </div>
+            <!--End comfort level-->
+
+            <!--Start Activities-->
+            <div class="section"><span>3</span>Activities</div>
+            <div class="inner-wrap">
+
+                <div class="FullCheckList">
+                    <div class="checkboxlist">
+                        <input type="checkbox" name="activity" value="Water skiing">Water skiing<br>
+                        <input type="checkbox" name="activity" value="Tennis">Tennis<br>
+                        <input type="checkbox" name="activity" value="Scuba diving">Scuba diving<br>
+                        <input type="checkbox" name="activity" value="Spa">Spa<br>
+                        <input type="checkbox" name="activity" value="Kids club">Kids club<br>
+                    </div>
+
+                    <div class="checkboxlist">
+                        <input type="checkbox" name="activity" value="Golf">Golf<br>
+                        <input type="checkbox" name="activity" value="Sailing">Sailing<br>
+                        <input type="checkbox" name="activity" value="Skiing">Skiing<br>
+                        <input type="checkbox" name="activity" value="Snowboard">Snowboard<br>
+                        <input type="checkbox" name="activity" value="Walking and hiking">Walking and hiking<br>
+                    </div>
+
+
+                    <div class="checkboxlist">
+                        <input type="checkbox" name="activity" value="Entertainment">Entertainment<br>
+                        <input type="checkbox" name="activity" value="Swimming and pool activities">Swimming and pool
+                        activities<br>
+                        <input type="checkbox" name="activity" value="Fitness Schoo">Fitness School<br>
+                        <input type="checkbox" name="activity" value="Mountain biking">Mountain biking<br>
+                        <input type="checkbox" name="activity" value="Archery">Archery<br>
+                    </div>
+
+                    <div class="checkboxlist">
+                        <input type="checkbox" name="activity" value="Windsurfing">Windsurfing <br>
+                        <input type="checkbox" name="activity" value="Funboarding">Funboarding <br>
+                        <input type="checkbox" name="activity" value="Horseriding">Horseriding <br>
+                        <input type="checkbox" name="activity"
+                            value="Flying trapeze school with circus activities">Flying trapeze school with circus
+                        activities<br>
+                        <input type="checkbox" name="activity" value="Snorkelling">Snorkelling<br>
+                    </div>
+                </div>
+                <input type="checkbox">
+            </div>
+            <!--End Activites-->
+
+            <!--Start Avalibility-->
+            <div class="section"><span>4</span>Avalibility</div>
+            <div class="inner-wrap">
+                <!--Jquery ui Date picker-->
+                <label for="startDate">Start Date </label>
+                <input type="text" id="startDate">
+                <label for="endDate">End Date </label>
+                <input type="text" id="endDate">
+            </div>
+
+
+            <!--Price-->
+            <div class="section"><span>5</span>Price Range</div>
+            <div class="inner-wrap">
+                <!--jquery-ui slider with max and min value-->
+                <input type="text" id="price" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                <div id="slider-range"></div>
+            </div>
+
+
+            <br>
+
+            <button id="search">Search</button>
+
+        </form>
+        <!--End of the form-->
+    </div>
+
+
+    <div class="section">
+
+        <div id="All True"></div>
+        <div id="destinationDiv"></div>
+        <div id="comfortDiv"></div>
+        <div id="locations"></div>
+        <div id="activitiesDiv"></div>
+        <div id="avalibilityDiv"></div>
+        <div id="priceDiv"></div>
+
+        <table id='myTable'></table>
+    </div>
+
+    <!--start foorer-->
+    <footer>
+        <small>copyright &copy; Sanuri <time datetime="2019-12-31 15:00">2019</time></small>
+    </footer>
+    <!--End footer-->
+
+    <script src="nav.js"></script>
+   
+    <script>
+        var selectedMin, selectedMax;
+        var CheckedActivities = new Array();
+        $(document).ready(function () {
+
+
+            /*dropdownList*/
+            $("#destination").selectmenu();
+
+            /*Comfortable*/
+            $("#slider").slider({
+                value: 4,
+                min: 3,
+                max: 5,
+                step: 0.5,
+                slide: function (event, ui) {
+                    $("#comfortLevel").val(ui.value);
+                }
+            });
+            $("#comfortLevel").val($("#slider").slider("value"));
+
+
+            /*Activites*/
+            //$( "input" ).checkboxradio();
+
+            /*pricerange*/
+            $("#slider-range").slider({
+                range: true,
+                min: 1000,
+                max: 2500,
+                values: [1500, 2000],
+                slide: function (event, ui) {
+                    $("#price").val("$ " + ui.values[0] + " - " + "$ " + ui.values[1]);
+                    selectedMin = ui.values[0];
+                    selectedMax = ui.values[1];
+                }
+            });
+
+            //$("#price").val("$" + $("#slider-range").slider("values", 0) +
+            //    " - $" + $("#slider-range").slider("values", 1));
+
+
+            /*Start date*/
+            $(function () {
+                var dateFormat = "mm/dd/yy",
+                    startDate = $("#startDate")
+                        .datepicker({
+                            defaultDate: "+1w",
+                            changeMonth: true,
+                            numberOfMonths: 3
+                        })
+                        .on("change", function () {
+                            endDate.datepicker("option", "minDate", getDate(this));
+                        }),
+                    endDate = $("#endDate").datepicker({
+                        defaultDate: "+1w",
+                        changeMonth: true,
+                        numberOfMonths: 3
+                    })
+                        .on("change", function () {
+                            startDate.datepicker("option", "maxDate", getDate(this));
+                        });
+
+                function getDate(element) {
+                    var date;
+                    try {
+                        date = $.datepicker.parseDate(dateFormat, element.value);
+                    } catch (error) {
+                        date = null;
+                    }
+
+                    return date;
+                }
+            });
+
+            /*Button*/
+            $(".widget input[type=submit]").button();
+            $("button").click(function (event) {
+                event.preventDefault();
+            });
+
+
+
+        });
+        $("#search").on("click", function () {
+            
+
+
+            //Start the internal json 
+            var data = {
+                "resorts": [
+                    {
+                        "id": "resort1",
+                        "destination": "Caribbean",
+                        "name": "Les Boucaniers",
+                        "location": "Martinique",
+                        "comfortLevel": "5",
+                        "activities": ["water skiing", "tennis", "scuba diving", "spa"],
+                        "price": 1254,
+                        "startDate": "05/05/2017",
+                        "endDate": "12/31/2019",
+                        "short_description": "The resort of Les Boucaniers is located on the laid-back beach-covered south coast of the island, and is perfectly placed for Martinique holidays that are both relaxing and awe-inspiring.",
+                        "picture": "club-med-les_boucaniers.jpeg",
+                        "long_description": "A divers' paradise in the Baie du Marin, a legendary spot.<br>Its bungalows are discreetly lodged in a tropical garden beside the white sand beach in superb Marin Bay. A magical site where you can enjoy a taste of everything, alone or with family or friends. Try water sports and the magnificent Club Med Spa*. You'll be enchanted by the exotic flavours of the local cuisine and the joyful spirit of the Caribbean.",
+                        "url": "resort1.html"
+                    },
+                    {
+                        "id": "resort2",
+                        "destination": "Indian Ocean",
+                        "name": "La Plantation d'Albion",
+                        "location": "Mauritius",
+                        "comfortLevel": "4",
+                        "activities": ["kids club", "golf", "scuba diving", "sailing"],
+                        "price": 2000,
+                        "startDate": "01/01/2017",
+                        "endDate": "12/31/2019",
+                        "short_description": "Beautifully located in one of the last remote creeks on the island, La Plantation d'Albion Club Med welcomes the most demanding of guests into a world of supreme refinement.",
+                        "picture": "La_Plantation_d'Albion.jpg",
+                        "long_description": "In a remote beauty spot, savour the luxury of Mauritian lifestyle. <br> The idyllic natural setting is enhanced by the sublime decor designed by Marc Hertrich and Nicolas Adnet, and the Resort's top-end comfort is perfectly reflected in its beautifully spacious rooms. The exceptional CINQ MONDES Spa* and luxurious overflow pool add an ideally Zen touch.<br> The Resort is entirely devoted to fulfilling its guests' desires and offers discreet, personal service in its swimming areas, bars and 'Table Gourmet' restaurants.",
+                        "url": "resort2.html"
+                    },
+                    {
+                        "id": "resort3",
+                        "destination": "Alps",
+                        "name": "Saint-Moritz Roi Soleil",
+                        "location": "Switzerland",
+                        "comfortLevel": "3.5",
+                        "activities": ["skiing", "snowboard", "walking and hiking", "entertainment"],
+                        "price": 1500,
+                        "startDate": "12/20/2019",
+                        "endDate": "04/24/2020",
+                        "short_description": "Experiencing the cosmopolitan ambience of a sunny ski resort.Enjoying authentic cross-country skiing over 170 kms (105 miles) of runs",
+                        "picture": "Saint-Moritz_Roi_Soleil.jpg",
+                        "long_description": "Nestled at the foot of the Swiss Alps at 1,750 metres, Club Med Saint-Moritz Roi Soleil is only a snowball’s throw away from the glamorous shores of St Moritz. This all-inclusive family ski resort sits in the Engadine valley, a domain that’s hosted both the Winter Olympics and the Ski World Championships multiple times. Ski, snowboard or snowshoe over 350 km of slopes, take a break by the banks of a frozen lake or stop for lunch at our mountain restaurants.<br/> In the evening, take a horse-drawn ride across the snow before catching up with the family over a cosy dinner of Swiss fondue.",
+                        "url": "resort3.html"
+                    },
+                    {
+                        "id": "resort4",
+                        "destination": "Europe",
+                        "name": "Bodrum Palmiye",
+                        "location": "Turkey",
+                        "comfortLevel": "3",
+                        "activities": ["tennis", "windsurfing", "funboarding", "sailing", "swimming pool activities"],
+                        "price": 1750,
+                        "startDate": "01/31/2019",
+                        "endDate": "12/31/2020",
+                        "short_description": "Club Med Bodrum Palmiye sits on a sheltered peninsula, where sea and sky meet on the shore of the Aegean Sea. This scenic resort is perfect for relaxing getaways, wellness retreats and all-inclusive fitness holidays in Turkey.",
+                        "picture": "Bodrum_Palmiye.jpg",
+                        "long_description": "Sat on a protected peninsula, perched above the crystal-clear waters of the Aegean sea, Club Med Bodrum Palmiye is a secluded jewel glistening under the Turkish sun.<br> This serene all-inclusive resort in Turkey is the perfect place to relax and find your momentum. Hike through the flowering oleander shrubs that cover the surrounding hills, stroll barefoot along our coastal promenade over rock pools and secret coves, or skip across the waves in a catamaran. Return to the resort and feed your body with fresh Turkish and global cuisine, while you take in the beautiful views and bask in the fresh sea air.",
+                        "url": "resort4.html"
+                    },
+                    {
+                        "id": "resort5",
+                        "destination": "Asia",
+                        "name": "Kabira Ishigaki",
+                        "location": "Japan",
+                        "comfortLevel": "4.5",
+                        "activities": ["archery", "fitness School", "mountain biking", "windsurfing", "scuba diving "],
+                        "price": 1000,
+                        "startDate": "01/01/2018",
+                        "endDate": "12/31/2020",
+                        "short_description": "This lively, all-inclusive beach resort occupies a bungalow complex, 12 km from the summit of Yarabu-dake and 27 km from Painushima Ishigaki Airport.",
+                        "picture": "Kabira_Ishigaki.jpg",
+                        "long_description": "Escape to Club Med Kabira Ishigaki, a Pacific gem on the Kabira peninsula, and discover all-inclusive family holidays in Japan where wellness is key. This Japanese all-inclusive family resort lies along the golden coast of Ishigaki Island, renowned for its secret to longevity. Dive into crystal blue waves with watersports from windsurfing and kayaking to stand-up paddleboarding and diving with manta rays. Then explore Okinawa’s blended culture with Sanshin lessons or help your kids paint their own Shisa island guardian.<br> Soak up the sun and feel rejuvenated at Club Med Kabira Ishigaki.",
+                        "url": "resort5.html"
+                    },
+                    {
+                        "id": "resort6",
+                        "destination": "Africa",
+                        "name": "Agadir",
+                        "location": "Morocco",
+                        "comfortLevel": "4",
+                        "activities": ["horseriding", "fitness school", "swimming pool activities"],
+                        "price": 2500,
+                        "startDate": "04/01/2017",
+                        "endDate": "09/31/2020",
+                        "short_description": "Club Med Agadir sits on the east coast of Morocco overlooking the Atlantic Ocean, close to both the beach and the desert. With sports and excursions galore, this resort is perfect for adventurous and relaxing all-inclusive family holidays in Morocco.",
+                        "picture": "Agadir.jpg",
+                        "long_description": "A stone’s throw from the illuminated beaches, relax as you take in the Atlantic Ocean at Club Med Agadir. This all-inclusive family resort on the east Morocco coast is imbued with Moroccan spirit, decorated in the traditional style with tiles, fountains and gardens of bay and eucalyptus. Get ready for adventure and horse ride along the dunes with your kids or dine with the Berber people in the desert. Back at the resort, unwind with a mint tea at our traditional-style restaurants or practice your serve on our clay tennis courts and savour exotic relaxation at Club Med Agadir.",
+                        "url": "resort6.html"
+                    },
+                    {
+                        "id": "resort7",
+                        "destination": "North and Central America",
+                        "name": "Cancún Yucatán",
+                        "location": "Mexico",
+                        "comfortLevel": "3",
+                        "activities": ["flying trapeze school with circus activities","archery", "snorkelling"],
+                        "price": 2300,
+                        "startDate": "02/01/2018",
+                        "endDate": "07/31/2020",
+                        "short_description": "Club Med Cancun Yucatan is the ideal choice for family all-inclusive holidays in Mexico.<br> Explore Mayan pyramids and vibrant coral reefs, swim with dolphins and enjoy our endless watersports. Visit between May and October to see baby turtles hatching right on the beach.",
+                        "picture": "Cancún_Yucatán.jpg",
+                        "long_description": "At the tip of the Cancun peninsula, between the Caribbean Sea and a turquoise lagoon, this all-inclusive family resort is ideal for watersports, family fun and exploring Mexico’s Mayan wonders. With three beaches and the world’s second largest coral reef close by, enjoy endless adventures from scuba diving to the flying trapeze. Make a splash with the kids in the family pool, relax in the spa, then enjoy a night cap in the wine cellar.<br>Book a suite in Jade, our luxurious 5Ψ Exclusive Collection space, to enjoy breakfast in bed, champagne toasts at sunset and our seafront infinity pool.",
+                        "url": "resort7.html"
+                    }
+
+                ]
+            };
+
+
+            //Store the input values to variables
+            var conceptName = $('#destination').find(":selected").text();
+            var getComfort = $("#comfortLevel").val();
+            var getPrice = $("#price").val();
+            var getStartDate = $("#startDate").val();
+            var getEndDate = $("#endDate").val();
+
+
+            //Check the checkbox value 
+            CheckedActivities = [];
+            $("input:checkbox[name=activity]:checked").each(function () {
+                CheckedActivities.push($(this).val().toLowerCase());
+            });
+
+            /*********************Start the output **************************/
+            //start destination div
+            var output = "<h2>Destination</h2><table><thead><th>Picture</th><th>Location</th><th>Name</th><th>Destination</th><th>Description</th></thead><tbody>";
+
+            //start output2 = comfortDiv
+            var output2 = "<h2>Comfort Level </h2><table><thead><th>Picture</th><th>Location</th><th>Name</th><th>Destination</th><th>Description</th></thead><tbody>";
+
+            //start output3 = priceDiv
+            var output3 = "<h2>Price</h2><table ><thead><th>Picture</th><th>Location</th><th>Name</th><th>Destination</th><th>Description</th></thead><tbody>";
+
+            //start output4 = activitiesDiv
+            var output4 = "<h2>Activities</h2><table ><thead><th>Picture</th><th>Location</th><th>Name</th><th>Destination</th><th>Description</th></thead><tbody>";
+
+            //start output5 = avalibilityDiv
+            var output5 = "<h2>Availability</h2><table ><thead><th>Picture</th><th>Location</th><th>Name</th><th>Destination</th><th>Description</th></thead><tbody>";
+
+            //Check the input value in data.resorts internal json 
+
+            // var relate_indexes = [];
+
+            for (var i in data.resorts) {
+
+                //Check the destination
+                if (conceptName == data.resorts[i].destination) {
+                    output += "<tr><td width='30%' height='30%'> <img src=" + data.resorts[i].picture + " /></td>";
+                    output += "<td>" + data.resorts[i].location + "</td>";
+                    output += "<td>" + data.resorts[i].name + "<br> <a href='C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resorts/" + data.resorts[i].id + ".html' target='_blank'>Visit Page</a>" + "</td>";
+                    output += "<td> " + data.resorts[i].destination + "</td>";
+                    output += "<td width='30%' height='30%'> " + data.resorts[i].short_description + "<br><h3>Price:</h3>"+data.resorts[i].price+"$</td></tr>";
+                }
+
+                // //Check the comfortable level
+                if (getComfort == data.resorts[i].comfortLevel) {
+                    output2 += "<tr><td width='30%' height='30%'> <img src=" + data.resorts[i].picture + " /></td>";
+                    output2 += "<td>" + data.resorts[i].location + "</td>";
+                    output2 += "<td>" + data.resorts[i].name + "<br> <a href='C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resorts/" + data.resorts[i].id + ".html' target='_blank'>Visit Page</a>" + "</td>";
+                    output2 += "<td> " + data.resorts[i].destination + "</td>";
+                    output2 += "<td width='30%' height='30%'> " + data.resorts[i].short_description + "<br><h3>Price:</h3>"+data.resorts[i].price+"$</td></tr>";
+                }
+
+                // //Check the price 
+                if ((parseInt(data.resorts[i].price) >= selectedMin && parseInt(data.resorts[i].price) <= selectedMax)) {
+                    output3 += "<tr><td width='30%' height='30%'> <img src=" + data.resorts[i].picture + " /></td>";
+                    output3 += "<td>" + data.resorts[i].location + "</td>";
+                    output3 += "<td>" + data.resorts[i].name + "<br> <a href='C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resorts/" + data.resorts[i].id + ".html' target='_blank'>Visit Page</a>" + "</td>";
+                    output3 += "<td> " + data.resorts[i].destination + "</td>";
+                    output3 += "<td width='30%' height='30%'> " + data.resorts[i].short_description + "<br><h3>Price:</h3>"+data.resorts[i].price+"$</td></tr>";
+                }
+
+
+                //check activities 
+                CheckedActivities.forEach(function (v, k) {
+                    var count = 0;
+                    if (data.resorts[i].activities.indexOf(v) !== -1) {
+                        // relate_indexes.push(i);
+                        count++;
+                    }
+                    if (count > 0) {
+                        output4 += "<tr><td width='30%' height='30%'> <img src=" + data.resorts[i].picture + " /></td>";
+                        output4 += "<td>" + data.resorts[i].location + "</td>";
+                        output4 += "<td>" + data.resorts[i].name + "<br> <a href='C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resorts/" + data.resorts[i].id + ".html' target='_blank'>Visit Page</a>" + "</td>";
+                        output4 += "<td> " + data.resorts[i].destination + "</td>";
+                        output4 += "<td width='30%' height='30%'> " + data.resorts[i].short_description + "<br><h3>Price:</h3>"+data.resorts[i].price+"$</td></tr>";
+                    }
+                });
+
+
+                //check dates
+                var rsd = Date.parse(data.resorts[i].startDate);
+                var red = Date.parse(data.resorts[i].endDate);
+                if (getStartDate != "" && getEndDate != "") {
+                    // check both dates
+                    var sd = Date.parse(getStartDate);
+                    var ed = Date.parse(getEndDate);
+                    if (sd - rsd > 0 && ed - red > 0) {
+                        output5 += "<tr><td width='30%' height='30%'> <img src=" + data.resorts[i].picture + " /></td>";
+                        output5 += "<td>" + data.resorts[i].location + "</td>";
+                        output5 += "<td>" + data.resorts[i].name + "<br> <a href='C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resorts/" + data.resorts[i].id + ".html' target='_blank'>Visit Page</a>" + "</td>";
+                        output5 += "<td> " + data.resorts[i].destination + "</td>";
+                        output5 += "<td width='30%' height='30%'> " + data.resorts[i].short_description + "<br><h3>Price:</h3>"+data.resorts[i].price+"$</td></tr>";
+                    }
+
+                }
+                else if (getStartDate != "" && getEndDate == "") {
+                    //check only start date
+                    var sd = Date.parse(getStartDate);
+                    if (sd - rsd > 0 && sd - red < 0) {
+                        output5 += "<tr><td width='30%' height='30%'> <img src=" + data.resorts[i].picture + " /></td>";
+                        output5 += "<td>" + data.resorts[i].location + "</td>";
+                        output5 += "<td>" + data.resorts[i].name + "<br> <a href='C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resorts/" + data.resorts[i].id + ".html' target='_blank'>Visit Page</a>" + "</td>";
+                        output5 += "<td> " + data.resorts[i].destination + "</td>";
+                        output5 += "<td width='30%' height='30%'> " + data.resorts[i].short_description + "<br><h3>Price:</h3>"+data.resorts[i].price+"$</td></tr>";
+                    }
+                }
+                else if (getStartDate == "" && getEndDate != "") {
+                    //check only end date
+                    var ed = Date.parse(getEndDate);
+                    if (ed - rsd > 0 && ed - red < 0) {
+                        output5 += "<tr><td width='30%' height='30%'> <img src=" + data.resorts[i].picture + " /></td>";
+                        output5 += "<td>" + data.resorts[i].location + "</td>";
+                        output5 += "<td>" + data.resorts[i].name + "<br> <a href='C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resorts/" + data.resorts[i].id + ".html' target='_blank'>Visit Page</a>" + "</td>";
+                        output5 += "<td> " + data.resorts[i].destination + "</td>";
+                        output5 += "<td width='30%' height='30%'> " + data.resorts[i].short_description + "<br><h3>Price:</h3>"+data.resorts[i].price+"$</td></tr>";
+                    }
+                }
+            }
+
+            // console.log(relate_indexes);
+
+            output += "</tbody></table>";
+            document.getElementById("destinationDiv").innerHTML = output;
+
+            output2 += "</tbody></table>";
+            document.getElementById("comfortDiv").innerHTML = output2;
+
+            output3 += "</tbody></table>";
+            document.getElementById("priceDiv").innerHTML = output3;
+
+            output4 += "</tbody></table>";
+            document.getElementById("activitiesDiv").innerHTML = output4;
+
+            output5 += "</tbody></table>";
+            document.getElementById("avalibilityDiv").innerHTML = output5;
+
+
+            /**************************End the output****************/
+
+        });
+    </script>
+
+
+</body>
+
+</html>

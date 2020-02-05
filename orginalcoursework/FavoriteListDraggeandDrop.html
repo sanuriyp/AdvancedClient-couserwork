@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Favorite Resort List</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://resources/demos/style.css">
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="nav.css">
+	<link rel="stylesheet" href="DragAndDrop.css">
+	
+  
+</head>
+<body>
+ 
+ <!--Header Start-->
+<header class="main_menu">
+
+    <div class="upperdiv">
+            <div class="social_media">
+                        <div class="social_icon">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-instagram"></a>
+							<span><a><i class="fas fa-phone-volume"></i>+880 356 257 142</a></span>
+                        </div>
+            </div>
+     </div>
+    <div class="container">
+         <div class="logo">
+             <img src="logo.jpg" alt="logo">
+         </div>
+		 
+    <nav>
+         <div class="icon-bar" onclick="Show()">
+		 <!--Three lines when screen size small-->
+             <i></i>
+             <i></i>
+             <i></i>
+         </div>
+
+         <ul id="nav-lists">
+             <li class="close"><span onclick="Hide()">×</span></li>
+                   <li><a href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/MainPageTest3.html">Home</a></li>
+                  <li><a href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/SearchTest5.html">Search Destinations</a></li>
+                  <li><a href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/FavoriteListDraggeandDrop.html">Favorite List</a></li>
+        </ul>
+
+    </nav>
+	
+	
+</div>
+
+</header>
+<!--End Header-->
+<hr/>
+ 
+  <!--Start Resort list-->
+<div class="ui-widget ui-helper-clearfix">
+
+<ul id="resorts" class="resorts ui-helper-reset ui-helper-clearfix">
+  <li class="ui-widget-content ui-corner-tr">
+    <h5 class="ui-widget-header">Resort 1 -Les_boucaniers</h5>
+    <img src="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/club-med-les_boucaniers.jpg" alt="The peaks of High Tatras" width="150" height="150">
+    <a href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/club-med-les_boucaniers.jpg" title="View larger image" class="ui-icon ui-icon-zoomin" target="_blank">View larger</a>
+    <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+  </li>
+ 
+  
+  <li class="ui-widget-content ui-corner-tr">
+    <h5 class="ui-widget-header">Resort 2-La_Plantation_d'Albion</h5>
+    <img src="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/La_Plantation_d'Albion.jpg" alt="On top of Kozi kopka" width="150" height="150">
+    <a href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/La_Plantation_d'Albion.jpg" title="View larger image" class="ui-icon ui-icon-zoomin" target="_blank">View larger</a>
+    <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+  </li>
+  
+   <li class="ui-widget-content ui-corner-tr">
+    <h5 class="ui-widget-header">Resort 3-Saint-Moritz_Roi_Soleil</h5>
+    <img src="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/Saint-Moritz_Roi_Soleil.jpg" alt="On top of Kozi kopka" width="150" height="150">
+    <a href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/Saint-Moritz_Roi_Soleil.jpg" title="View larger image" class="ui-icon ui-icon-zoomin" target="_blank">View larger</a>
+    <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+  </li>
+  
+   <li class="ui-widget-content ui-corner-tr">
+    <h5 class="ui-widget-header">Resort 4-Bodrum_Palmiye</h5>
+    <img src="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/Bodrum_Palmiye.jpg" alt="On top of Kozi kopka" width="150" height="150">
+    <a href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/Bodrum_Palmiye.jpg" title="View larger image" class="ui-icon ui-icon-zoomin" target="_blank">View larger</a>
+    <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+  </li>
+  
+  <li class="ui-widget-content ui-corner-tr">
+    <h5 class="ui-widget-header">Resort 5-Kabira_Ishigaki</h5>
+    <img src="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/Kabira_Ishigaki.jpg" alt="On top of Kozi kopka" width="150" height="150">
+    <a href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/Kabira_Ishigaki.jpg" title="View larger image" class="ui-icon ui-icon-zoomin" target="_blank">View larger</a>
+    <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+  </li>
+  
+  <li class="ui-widget-content ui-corner-tr">
+    <h5 class="ui-widget-header">Resort 6-Agadir</h5>
+    <img src="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/Agadir.jpg" alt="On top of Kozi kopka" width="150" height="150">
+    <a href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/Agadir.jpg" title="View larger image" class="ui-icon ui-icon-zoomin" target="_blank">View larger</a>
+    <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+  </li>
+  
+  <li class="ui-widget-content ui-corner-tr">
+    <h5 class="ui-widget-header">Resort 7-Cancún_Yucatán</h5>
+    <img src="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/Cancún_Yucatán.jpg" alt="On top of Kozi kopka" width="150" height="150">
+    <a href="C:/Users/Sanuri/Downloads/AdvClientServer/CourseWork/orginalcoursework/resortpics/Cancún_Yucatán.jpg" title="View larger image" class="ui-icon ui-icon-zoomin" target="_blank">View larger</a>
+    <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+  </li>
+  
+</ul>
+ 
+<div id="favorite" class="ui-widget-content ui-state-default">
+  <h4 class="ui-widget-header"><span class="ui-icon ui-icon-heart"></span>Favorite Resorts </h4><span class="ui-icon ui-icon-trash"></span>
+</div>
+ 
+</div>
+<!--End Resort list-->
+
+
+<!--start foorer-->
+	 <footer>
+	      <small>copyright &copy; Sanuri <time datetime="2019-12-31 15:00">2019</time></small>
+	 </footer>
+<!--End footer-->
+ 
+ <script src="nav.js"></script>
+ <script src="DragAndDrop.js"></script>
+</body>
+</html>
